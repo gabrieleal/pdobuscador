@@ -51,6 +51,7 @@
             width: 90%;
             margin: 0 auto;
         }
+
         #resptable td {
             text-align: center;
         }
@@ -66,17 +67,16 @@
                 $.ajax({
                     type: "GET",
                     url: "consulta.php",
-                    data: { nom },
-                    success: function (r) {
-                        r = JSON.parse(r);
-                        i = 0;
-                        while (i < r.length) {
-                          
-                            $("#resptable").append(
-                                "<tr><td>" + r[i].id + "</td><td>" + r[i].nombre + "</td><td>" + r[i].stock + "</td></tr>"
-                            );
-                            i++;
-                        }
+                    data: { nom }
+                }).done(function (r) {
+                    r = JSON.parse(r);
+                    i = 0;
+                    while (i < r.length) {
+
+                        $("#resptable").append(
+                            "<tr><td>" + r[i].id + "</td><td>" + r[i].nombre + "</td><td>" + r[i].stock + "</td></tr>"
+                        );
+                        i++;
                     }
                 });
 

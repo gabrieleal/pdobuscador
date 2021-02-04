@@ -4,17 +4,21 @@ try{
     include "_conexion.php";
 
     //0. recibimos el nombre del articulo buscado
-    $nom = $_GET["nom"];
+    //$_REQUEST tiene la capacidad de recibir los datos por GET y POST
+    $nom = $_REQUEST["nom"]; 
 
     // 1. creamos la consulta SQL
-    $sql = 'SELECT * FROM productos WHERE nombre LIKE %?% ';
+    $sql = 'SELECT * FROM productos WHERE nombre LIKE ? ';
     
     //2. almacenamos el objeto statement que nos retorna la funcion prepare()
     $stmt = $con->prepare($sql);
 
     //3. ejecutamos la consulta con la funcion execute() del obj statement
     //le pasamos a la funcion un array con los datos a reemplazar en la consulta
-    $stmt->execute(array($nom));
+    // le agregamos los comodines para luego agregarlo a la consulta
+    $stmt->execute(array("%".$nom."%"));
+
+
     //4_a. creo un array para ir almacenando los datos de la busqueda
     $array=[];
     $i=0;
