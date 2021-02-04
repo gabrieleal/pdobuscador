@@ -4,93 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <title>Conexion con PDO</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        h1 {
-            margin: 10px auto;
-            text-align: center;
-        }
-
-        #buscador {
-            margin: 10px auto;
-            width: 300px;
-            padding: 15px;
-            background-color: aquamarine;
-        }
-
-        form {
-            width: 200px;
-            padding: 15px;
-            margin: 0 auto;
-        }
-
-        #enviar {
-            margin-top: 10px;
-            width: 100px;
-            right: 50%;
-            transform: translateX(50%);
-        }
-
-
-        #respuesta {
-            margin: 0 auto;
-            padding: 10px;
-            width: 600px;
-            border-radius: 30px;
-            background-color: teal;
-            color: aliceblue;
-        }
-
-        #resptable {
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        #resptable td {
-            text-align: center;
-        }
-    </style>
-    <script>
-
-        $(document).ready(function () {
-
-            $("#enviar").click(function () {
-
-                var nom = $("#nombre").val();
-
-                $.ajax({
-                    type: "GET",
-                    url: "consulta.php",
-                    data: { nom }
-                }).done(function (r) {
-                    r = JSON.parse(r);
-                    i = 0;
-                    while (i < r.length) {
-
-                        $("#resptable").append(
-                            "<tr><td>" + r[i].id + "</td><td>" + r[i].nombre + "</td><td>" + r[i].stock + "</td></tr>"
-                        );
-                        i++;
-                    }
-                });
-
-
-            });
-
-
-
-        });
-
-
-
-    </script>
-
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/funciones.js"></script>
 </head>
 
 <body>

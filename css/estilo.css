@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#buscador {
+    margin: 10px auto;
+    width: 300px;
+    padding: 15px;
+    background-color: aquamarine;
+}
+
+form {
+    width: 200px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+#enviar {
+    margin-top: 10px;
+    width: 100px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+
+#respuesta {
+    margin: 0 auto;
+    padding: 10px;
+    width: 600px;
+    border-radius: 30px;
+    background-color: teal;
+    color: aliceblue;
+}
+
+#resptable {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#resptable td {
+    text-align: center;
+}
