@@ -14,22 +14,21 @@
     <h1>conexion con PDO</h1>
     <hr>
     <div id="buscador">
-        <form action="">
-            <table>
-                <tr>
-                    <td>Nombre: </td>
-                    <td><input type="text" name="nombre" id="nombre"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" id="enviar" value="enviar"></td>
-                </tr>
-            </table>
+        <table>
+            <tr>
+                <td>Nombre: </td>
+                <td><input type="text" name="nombre" id="nombre"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" id="enviar" value="enviar"></td>
+            </tr>
+        </table>
 
-        </form>
+
     </div>
 
     <div id="respuesta">
-        <table id="resptable">
+        <table class="resptable">
             <thead>
                 <tr>
                     <th>id</th>
@@ -37,6 +36,9 @@
                     <th>stock</th>
                 </tr>
             </thead>
+            <tbody id="listar">
+    
+            </tbody>
         </table>
     </div>
 </body>

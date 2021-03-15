@@ -15,7 +15,7 @@ h1 {
     background-color: aquamarine;
 }
 
-form {
+#buscador table {
     width: 200px;
     padding: 15px;
     margin: 0 auto;
@@ -38,11 +38,11 @@ form {
     color: aliceblue;
 }
 
-#resptable {
+.resptable {
     width: 90%;
     margin: 0 auto;
 }
 
-#resptable td {
+.resptable td {
     text-align: center;
 }

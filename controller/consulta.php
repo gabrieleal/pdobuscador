@@ -5,7 +5,7 @@ try{
 
     //0. recibimos el nombre del articulo buscado
     //$_REQUEST tiene la capacidad de recibir los datos por GET y POST
-    $nom = $_REQUEST["nom"]; 
+    $nom = $_POST["nom"]; 
 
     // 1. creamos la consulta SQL
     $sql = 'SELECT * FROM productos WHERE nombre LIKE ? ';
